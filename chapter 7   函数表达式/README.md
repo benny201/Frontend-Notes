@@ -151,9 +151,24 @@ element = null;
         name = value;
     }
     
-    Person.peo
-})
+    Person.prototype.getName = function(){
+        return name;
+    }
+    
+    Person.prototype.setName = function(){
+        name = value;
+    }
+};)();
+
+改变其中的name，会使得每个实例的值都一样。
 ```
+###模块模式 module pattern
+* 为单例添加私有变量和特权方法
+* 如果必须创建一个对象并以某些数据对其进行初始化，同时还要公开一些能够访问这些似有数据的方法，那么就可以使用模块模式了。
+
+### 增强的模块模式
+。。。
+
 
 
  
