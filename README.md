@@ -8,7 +8,7 @@
 * [chapter 7: 函数表达式] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%207%20%20%20函数表达式 "chapter 7")
 * [chapter 8: BOM] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%208%20%20BOM "chapter 8")
 * chapter 9: 客户端检测
-* [chapter 10: BOM] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2010%20%20DOM "chapter 10")
+* [chapter 10: DOM] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2010%20%20DOM "chapter 10")
 
 
 
