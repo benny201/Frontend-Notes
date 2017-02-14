@@ -15,5 +15,7 @@
 * [JavaScript入门篇] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%207%20%20%20函数表达式 "入门篇")
 * [JavaScript进阶篇](https://github.com/benny201/JavaScript-Notes/tree/master/Imooc笔记/JavaScript进阶 "进阶篇")
 
-
-
+```
+讲解JavaScript的文章
+```
+* [一篇关于scoping和hoisting的好文章](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html "一篇关于scoping和hoisting的好文章")
