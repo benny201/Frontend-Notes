@@ -21,4 +21,4 @@
 ```
 讲解JavaScript的文章
 ```
-* [一篇关于scoping和hoisting的好文章](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html "一篇关于scoping和hoisting的好文章")
+* [一篇关于scoping和hoisting的文章](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html "一篇关于scoping和hoisting的好文章")
