@@ -9,9 +9,9 @@
 * [chapter 8: BOM] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%208%20%20BOM "chapter 8")
 * chapter 9: 客户端检测
 * [chapter 10: DOM] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2010%20%20DOM "chapter 10")
-
-
-
+* chapter 11: DOM1
+* chapter 12: DOM2 和 DOM3 
+* chapter 13: 事件
 ```
 慕课网的学习笔记
 ```
