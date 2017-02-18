@@ -11,12 +11,13 @@
 * [chapter 10: DOM] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2010%20%20DOM "chapter 10")
 * chapter 11: DOM 扩展
 * chapter 12: DOM2 和 DOM3 
-* chapter 13: 事件
+* [chapter 13: 事件] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2013%20事件 "chapter 13")
+
 ```
 慕课网的学习笔记
 ```
 * [JavaScript入门篇] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%207%20%20%20函数表达式 "入门篇")
-* [JavaScript进阶篇](https://github.com/benny201/JavaScript-Notes/tree/master/Imooc笔记/JavaScript进阶 "进阶篇")
+* [JavaScript进阶篇] (https://github.com/benny201/JavaScript-Notes/tree/master/Imooc笔记/JavaScript进阶 "进阶篇")
 
 ```
 讲解JavaScript的文章
