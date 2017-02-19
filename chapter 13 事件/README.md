@@ -60,7 +60,116 @@ IE中的两个方法：
 var btn = document.getElementById("myBtn");
 myBtn.attachEvent("onclick", function(){});
 ```
+IE中的监听器与DOM0级的主要区别在于事件处理程序的作用域：
+* DOM0级事件处理程序会在其所属元素的作用域内运行
+* IE的则会在全局作用域中运行。
+IE中监听器与DOM2级的相同与区别：
+#### 共同点
+* 都可以为一个元素添加多个事件处理程序
+#### 区别
+* DOM2级在一个元素多个事件处理程序的情况下，是按照书写顺序执行事件的。
+* IE中则是从最后的开始处理。
+
+### 跨浏览器的事件处理程序
+创建一个EventUtil的对象，其中含有addHandler()和removeHandler()的方法。
+```JavaScript
+var EventUtil = {
+    addHandler: function(element, type, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(type, handler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent("on"+type, handler);
+        } else {
+            element["on" + type] = handler;
+        }
+    }
+
+    removeHandler: function(element, type, handler) {
+        if (element.addEventListener) {
+            element.removeEventListener(type, handler, false);
+        } else if (element.attachEvent) {
+            element.detachEvent("on"+type, handler);
+        } else {
+            element["on" + type] = null;
+        }
+    }
+}
+```
+
+## 事件对象
+出发DOM上的某个事件时，会产生一个事件对象event，这个对象中包含着所有与事件有关的信息。
+
+### DOM中的事件对象
+兼容DOM的浏览器会将一个event对象传入到事件处理程序中。
+event对象的一些属性：
+* type: event的类型
+* cancelable
+* currentTarget: 事件处理程序当前正在处理事件的那个元素
+* target:事件的目标
+* stopPropagation()
+* ...
+
+#### this、currentTarget和target
+在事件处理程序内部，对象this始终等于currentTarget的值，而target则只包含事件的实际目标。
+如果直接将事件处理程序指定给了目标函数，this，currentTraget和target包涵相同的值。
+
+#### type
+event.type结合switch可以处理多个动作
+```JavaScript
+var handler = function(event) {
+    switch(event.type) {
+        case "click":
+    }
+}
+
+btn.onclick = handler;
+```
+#### preventDefault()/cancelable
+```JavaScript
+link.onclick = function(event) {
+    event.preventDefault();
+}
+
+只有cancelable设置为true才能用preventDefault()去去笑默认行为
+```
+
+#### stopPropagation()
+立刻停止事件在DOM层次中传播，即取消进一步的事件捕获或冒泡。
+**举个栗子**：
+```JavaScript
+var btn = document.getElementById("myBtn");
+btn.onclick = function(event) {
+    event.stopPropagation();
+}
+
+document.body.onclick = function(event) {
+    alert();
+}
+
+在btn处停止了onclick的冒泡，所以body上的onclick动作就不会被处理了。
+```
+
+#### eventPhase
+该属性可以查出事件流在哪个阶段：
+* 1: 事件处于捕获阶段
+* 2: 事件出狱目标阶段
+* 3: 事件处于冒泡阶段
 
 
+### IE中的事件对象
+获取IE中的对象方法不同取决于你用哪种方法添加事件处理程序。
+* 使用DOM0级添加事件处理程序
+```JavaScript
+var event = window.event;
+alert(event.type)
 
-
+IE中的type与DOM中的type相同
+```
+* 使用attachEvent()添加
+```JavaScript
+对同一个对象，利用：
+btn.attachEvent("onclick", function(event) {
+    alert(event.type);
+});
+```
+*
