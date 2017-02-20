@@ -112,6 +112,13 @@ event对象的一些属性：
 #### this、currentTarget和target
 在事件处理程序内部，对象this始终等于currentTarget的值，而target则只包含事件的实际目标。
 如果直接将事件处理程序指定给了目标函数，this，currentTraget和target包涵相同的值。
+```JavaScript
+EventUtil = {
+    getTarget: function(event) {
+        return event.target || event.srcElement;
+    }
+}
+```
 
 #### type
 event.type结合switch可以处理多个动作
@@ -317,6 +324,7 @@ shiftKey, ctrlKey, altKey 和 metaKey 这些属性都是布尔值。相应的键
 ### 事件委托
 事件处理程序过多，解决方案是`事件委托`。
 事件委托利用了事件冒泡，指定一个事件处理程序就可以管理某一类型的所有事件。
+尽可能在最高层次上使用事件委托。
 ```JavaScript
 var list = document.getElementById("myLinks");
 EventUtil.addHandler(list, "click", function(event) {
@@ -333,5 +341,27 @@ EventUtil.addHandler(list, "click", function(event) {
     }
 });
 ```
+click, mouseup, mousedown, keydown, keyup 和 keypress最适合采用事件委托。
 
-click, mouseup, mousedown, keydown, keyup 和 keypress
+
+### 移除事件处理程序
+过多的不用的空事件处理程序（dangling event handler）， 也是造成web应用程序内存与性能问题的主要原因。
+```JavaScript
+innerHTML 属性设置或返回表格行的开始和结束标签之间的 HTML。
+innerText 与 innerHTML 的区别在于，innerHTML会解析语句，然尔innerText将所有语句作为纯text处理。
+```
+* 情况一：
+在一些带有事件处理程序的`<input>`被替换成别的东西时，这个事件处理程序就可能与按钮保持着引用关系，`扔保存在内存中`。
+应该先移除事件处理程序再替换东西。
+
+* 情况二：
+再卸载页面时也会导致内存中滞留的事件处理程序占用的内存没有被释放。
+所以应该在`unload`事件中移除所有的事件处理程序。
+
+
+## 模拟事件
+使用JavaScript在任何时刻触发特定的事件。测试Web应用程序，模拟触发事件是一种极其有用的技术。
+
+### DOM中的事件模拟
+可以在document对象上使用`createEvent(String)`来创建event对象。DOM2级为复数，DOM3级为单数。均能够冒泡！
+
