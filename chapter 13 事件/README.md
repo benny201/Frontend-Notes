@@ -172,4 +172,166 @@ btn.attachEvent("onclick", function(event) {
     alert(event.type);
 });
 ```
-*
+* 如果是通过HTML特性指定的事件处理程序, 可以直接用event的变量来访问。
+
+#### IE对象属性
+* cancelBubble: 与stopPropagation（）相同
+* returnValue: preventDefault（）
+* srcElement: 事件的目标
+
+```JavaScript
+btn.onclick = function() {
+    alert(window.event.srcElement === this); //true
+};
+btn.attachEvent("onclick", function(event) {
+    alert(event.srcElement === this); //false
+});
+```
+
+### 跨浏览器的事件对象操作
+* P360
+
+## 事件类型
+* UI事件
+* 焦点事件
+* 鼠标事件
+* 滚轮事件
+* 文本事件
+* 键盘事件
+* 合成事件
+
+### UI事件
+UI事件指的是不一定与用户操作有关的事件
+
+#### load事件
+当页面完全加载完之后，就会触发load事件。－> onload
+* 第一种方式：
+```JavaScript
+EventUtil.addHandler(window, "load", function(event) {
+    alert("");
+});
+
+兼容DOM的浏览器会将event.target = document
+IE不会为它设置srcElement信息
+```
+* 第二种方式：
+为`<body>`添加一个onload特性
+```JavaScript
+<body onload="alert()">
+```
+一般来说window上面发生的任何事件都可以在`<body>`元素中通过相应的特性来指定，因为在HTML中无法访问window元素。－>为了向后兼容。
+但推荐JavaScript形式。
+
+* 在`<img>`元素上也可以指定load特性，但是如果是想创建一个新img并且要求图片加载后出现提示，那么要`先加入load事件，再设置src`。
+因为在创建新节点的时候，即使没将img加入DOM树，只要赋予了src，就开始下载。
+
+* `<script>` 和 `<link>`节点也支持onload
+
+#### unload事件
+这个事件在文档呗完全卸载后触发： `用户从一个页面切换到另一个页面`
+
+#### resize事件
+当浏览器呗调整到一个新的高度或者宽度时，就会触发resize事件。
+这个事件也在window上面触发，因此可以通过JavaScript或者`<body>`元素虹的onresize特性来指定。
+
+#### scorll事件
+文档滚动期间被触发。
+* 混杂模式中，可以通过`<body>`的scrollLeft或者scrollRight来监控
+* 在标准模式中，除Safari之外，可视通过`<html>`元素来反映这一变化，Safari仍然基于`<body>`
+
+```JavaScript
+EventUtil.addHandler(window, "scorll", function(){
+    if (document.compatMode == "CSS1Compat") {
+        //标准模式
+    } else {
+        //混杂模式
+    }
+});
+```
+### 焦点事件
+焦点事件会在页面元素获得或者失去焦点时触发。利用document.hasFocus() & document.activeElement可以知晓用户行踪。
+
+#### blur失焦事件
+不冒泡事件
+#### focus事件
+不冒泡事件
+#### focusin
+冒泡事件。等价于focus
+### 鼠标与滚轮事件
+* click: 单击鼠标
+* dbclick: 双击鼠标
+* mousedown: 任意鼠标按键
+* mouseenter: 光标首次移动到元素范围内／不冒泡
+* mouseleave: 光标移开／不冒泡
+* mousemove: 元素内移动反复触发
+* mouseout:
+* mouseup: 用户释放鼠标按钮时触发。
+click和dbclick事件发生有一定的顺序：
+1. mousedown
+2. mouseup
+3. click
+4. mousedown
+5. mouseup
+6. click
+7. dbclick
+检测浏览器是否支持以上DOM2级事件：
+```JavaScript
+var isSupported = document.implementation.hasFeature("MouseEvents", "2.0");
+```
+同理，检测DOM3级事件（应该用MouseEvent）：
+```JavaScript
+var isSupported = document.implementation.hasFeature("MouseEvent", "3.0");
+```
+#### 客户区坐标位置
+在浏览器视口中，对象中的clientX和clientY保存了鼠标指针的位置。
+```JavaScript
+var div = document.getElementById("myDiv");
+
+EventUtil.addHandler(div, "click", function(event) {
+    event = EventUtil.getEvent(event);
+    alert(event.clientX + event.clientY);
+});
+```
+
+#### 页面坐标位置
+pageX和pageY记录的是事件对象的位置。非视口的左边和定边计算。
+在页面没有滚动的情况下，pageX和pageY的值等于clientX和clientY的值。
+
+#### 屏幕坐标位置
+整个屏幕的位置。screenX和screenY。
+
+#### 修改键
+shiftKey, ctrlKey, altKey 和 metaKey 这些属性都是布尔值。相应的键按下则为true。
+可以配合click事件用。
+
+####
+####
+####
+####
+####
+
+## 内存和性能
+事件处理程序数量影响了页面的整体运行性能。
+每个函数都是对象，会占用内存，所以对象越多，性能越差。
+
+### 事件委托
+事件处理程序过多，解决方案是`事件委托`。
+事件委托利用了事件冒泡，指定一个事件处理程序就可以管理某一类型的所有事件。
+```JavaScript
+var list = document.getElementById("myLinks");
+EventUtil.addHandler(list, "click", function(event) {
+    event = EventUtil.getEvent(event);
+    var target = EventUtil.getEvent(event);
+
+    switch(target.id) {
+        case "":
+
+        case "":
+
+        case "":
+
+    }
+});
+```
+
+click, mouseup, mousedown, keydown, keyup 和 keypress
