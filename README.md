@@ -12,6 +12,7 @@
 * chapter 11: DOM 扩展
 * chapter 12: DOM2 和 DOM3 
 * [chapter 13: 事件] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2013%20事件 "chapter 13")
+* [chapter 20: JSON] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2020%20JSON "chapter 20")
 
 ```
 慕课网的学习笔记
@@ -23,3 +24,4 @@
 讲解JavaScript的文章
 ```
 * [一篇关于scoping和hoisting的文章](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html "一篇关于scoping和hoisting的好文章")
+
