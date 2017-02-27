@@ -119,23 +119,101 @@ xhr.onload = function() {
         //success
     }
 }
+```
+### progress事件
+```JavaScript
+xhr.onprogress = function(event) {
+    if (event.lengthComputable == true) {
+        event.position;
+        event.totalSize;
+    }
+}
+```
+
+progress事件会接受一个event对象，有三个属性：
+* lengthComputable: 进度信息是否可读
+* position: 已接收字节数
+* totalSize: 根据content－length响应头部确定的语气字节数。
 
 
+## 跨域源资源共享
+默认情况下，XHR对象只能访问与包含它的页面位于一个域中的资源（安全策略）。
+CORS定义了访问跨源资源时，浏览器与服务器应该如何沟通。
+基本思想：使用自定义Http头部让浏览器与服务器进行沟通，从而决定请求或响应的成功和失败。
+比如发送请求时，附加一个Origin头部(源信息包含协议，域名，端口)：
+```JavaScript
+Origin: http://www.nczonline.net
+如果服务器认为这个请求可以接受，则返回：
+Access-Control-Allow-Origin: http://www.nczonline.net
+```
 
+### IE中的CORS
+IE中是XDR对象，XDomainRequst。与XHR类似。
+与XHR不同点：
+* cookie不会随请求发送，也不会随响应返回。
+* 只能设置请求头部信息中的content－type
+* 不能访问响应头部的信息。
+* 只只吃get和post请求
+调用方法也是先open再send，open()只接受请求类型和url，一定是异步的。
+不能访问readyState，只能是：
+* 响应有效触发load事件
+* 失败就会触发error事件
+可以设置timeout和对应的timeout事件
+在`POST`请求时可以设置`contentType`。
 
+### 其他浏览器的CORS
+就用XHR就可以了。但是为了区别同源请求和跨源请求，本地资源最好使用相对URL，远程资源使用绝对URL。
 
+### Preflighted Requests
 
+### 带凭证的请求
+默认情况下，跨源请求不提供凭证的请求，但可以设置`withCredentials : true`来要求发送凭证。
+如果服务器接受带凭证的请求会用HTTP头部来响应：
+```JavaScript
+Access-Control-Allow-Credentials: true
+```
 
+### 跨浏览器的CORS
+检查XdomainRequest对象和withCredentials属性。
 
+```JavaScript
+function createCORS(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+        xhr.open(method, url, true);
+    } else if (typeof XDomianRequest != "undefined") {
+        xhr = new XDomianRequest();
+        xhr.open(method, url);
+    } else {
+        xhr = null;
+    }
+}
+```
+## 其他跨域技术
+利用DOM中能够执行跨域请求的功能。
 
+### 图片PING
+使用`<img>`，因为网页可以从任何网页加载图像，可以用于跨域。但是图片PING得不到任何具体的数据，但是可以监听load和error事件。
+只要请求完成，就能得到通知。请求从设置src属性那一刻开始。
+```JavaScript
+var img = new Image();
+img.onload = img.onerror = function() {
+    alert();
+}
+img.src = "";
+```
+图片PING最常用于跟踪用语点击页面或动态广告曝光次数。但是只能发送`get`请求, 无法访问服务器的响应文本。
 
+### JSONP
+JSONP stands for JSON with padding ： 包含在函数调用中的JSON，例如：
+```JavaScript
+callback({"name" : "benny"})
+```
+在页面上引入不同域上的js脚本文件却是可以的，jsonp正是利用这个特性来实现的。jsonp的原理就很清楚了，通过script标签引入一个js文件，这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要的json数据作为参数传入。所以jsonp是需要服务器端的页面进行相应的配合的。
 
-
-
-
-
-
-
-
-
-
+### Comet(也叫服务器推送)
+Ajax饰从页面向服务器请求数据的技术，Comet是一种服务器从页面推送数据的技术。
+实现Comet的两种方式：
+* 长轮询
+* HTTP流
+长轮询即： 浏览器
