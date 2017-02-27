@@ -81,3 +81,61 @@ function addURLParam(url, name, value) {
 ### POST请求
 向服务器发送应该被保存的数据。
 
+## XMLHttpRequest 2级
+
+### FormData类型
+FormData为序列化表单以及创建与表单格式相同的数据提供了便利。
+```JavaScript
+var data = new FormData();
+data.append("name", "Benny");
+```
+append接受键值对参数。
+可以用xhr.send()发送form对象
+```JavaScript
+var XHR = new XMLHttpRequest();
+xhr.open("post", "postexample", true);
+xhr.send(new FormData(form));
+```
+### 超时设定
+```JavaScript
+xhr.timeout = 1000;
+xhr.ontime = function() {
+
+};
+```
+不知道是否支持IE8意外的浏览器
+
+## 进度事件
+以下6个进度事件针对XHR事件
+* loadstart: 接受到相应数据的第一个字节时触发
+* progress: 接受期间不断触发
+* error: 请求错误时
+* abort: 调用abort()时
+* load: 在接收到完整的响应数据时
+* loadend: 通信完成或者error／abort／load事件后触发
+```JavaScript
+xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+        //success
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
