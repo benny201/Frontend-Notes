@@ -1,6 +1,6 @@
 # This/call/apply/bind
 
-## 怎么才会绑定this
+## 怎么才会绑定this?
 ### 将函数赋予对象的属性时，this会绑定这个对象
 ```JavaScript
 function test() {
