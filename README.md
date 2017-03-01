@@ -13,7 +13,7 @@
 * chapter 12: DOM2 和 DOM3 
 * [chapter 13: 事件] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2013%20事件 "chapter 13")
 * [chapter 20: JSON] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2020%20JSON "chapter 20")
-
+* [chapter 21: AJAX和Comet](https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2021%20Ajax%20和%20Comet "chapter 21")
 ```
 慕课网的学习笔记
 ```
