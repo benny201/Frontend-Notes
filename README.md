@@ -1,6 +1,6 @@
 # JavaScript-Notes
 ```
- 阅读《JavaScript高级程序设计》的笔记，每日一章
+ 阅读《JavaScript高级程序设计》的笔记
 ```
 
 * [chapter 5: 引用类型] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%205%20%20%20引用类型 "chapter 5")
@@ -14,6 +14,11 @@
 * [chapter 13: 事件] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2013%20事件 "chapter 13")
 * [chapter 20: JSON] (https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2020%20JSON "chapter 20")
 * [chapter 21: AJAX和Comet](https://github.com/benny201/JavaScript-Notes/tree/master/chapter%2021%20Ajax%20和%20Comet "chapter 21")
+
+```
+阅读《JavaScript精粹》的笔记
+```
+
 
 ```
 JavaScript一些重要知识点
