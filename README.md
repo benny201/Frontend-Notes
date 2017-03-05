@@ -18,8 +18,9 @@
 ```
 阅读《JavaScript精粹》的笔记
 ```
-
-
+* [语法](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/语法)
+* [对象](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/对象)
+* [函数](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/函数)
 ```
 JavaScript一些重要知识点
 ```
