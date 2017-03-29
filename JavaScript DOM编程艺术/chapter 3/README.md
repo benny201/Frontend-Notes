@@ -50,3 +50,5 @@ document.getElementById("id").getAttribute("title");
 
 ### setAttribute("atrribute", value)
 如果attribute存在的话会覆盖原值，如果不存在则会新创建一个attribute。
+通过setAttribute做出的修改不会反映在文档源代码里。
+因为：先还在文档的静态内容，再动态刷新，动态刷新不影响文档的静态内容。
