@@ -32,12 +32,8 @@
 * [数组](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/数组)
 * [方法](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/方法)
 * [糟粕](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/糟粕)
-
-<<<<<<< HEAD
 `总结：`读完《JavaScript高级程序设计》的基础部分再来看这本书的时候，理清了很多之前的问题。这本书还从JS起源来分析JS中的糟粕，有理有据。
 
-=======
->>>>>>> origin/master
 ```
 阅读《JavaScript DOM编程艺术》的笔记
 ```
