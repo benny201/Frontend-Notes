@@ -33,8 +33,11 @@
 * [方法](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/方法)
 * [糟粕](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/糟粕)
 
+<<<<<<< HEAD
 `总结：`读完《JavaScript高级程序设计》的基础部分再来看这本书的时候，理清了很多之前的问题。这本书还从JS起源来分析JS中的糟粕，有理有据。
 
+=======
+>>>>>>> origin/master
 ```
 阅读《JavaScript DOM编程艺术》的笔记
 ```
@@ -49,7 +52,7 @@
 阅读《高性能JavaScript》的笔记
 ```
 
-
+```
 JavaScript一些重要知识点
 ```
 * [this/apply/call/bind](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript一些关键知识点/This对象)
