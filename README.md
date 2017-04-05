@@ -8,6 +8,7 @@
 * `《高性能JavaScript》`
 * `《精通CSS》`
 * `《图解HTTP》`
+* `《ES6》`
 ## 拟读plan
 * `《锋利的Jquery》`
 * `《深入浅出NodeJs》`
