@@ -26,6 +26,19 @@
 * [方法](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/方法)
 * [糟粕](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/糟粕)
 ```
+```
+阅读《JavaScript DOM编程艺术》的笔记
+```
+* [chapter 2](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript%20DOM编程艺术/chapter%202)
+* [chapter 3](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript%20DOM编程艺术/chapter%203)
+* [chapter 4](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript%20DOM编程艺术/chapter%204)
+* [chapter 5](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript%20DOM编程艺术/chapter%205)
+
+```
+阅读《高性能JavaScript》的笔记
+```
+
+
 JavaScript一些重要知识点
 ```
 * [this/apply/call/bind](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript一些关键知识点/This对象)
