@@ -1,10 +1,10 @@
 # Front-End Books and Note
 学习JavaScript过程中阅读过的的书籍以及看过的网上资源。
-## 已读
+## DONE
 `《JavaScript高级程序设计》`, `《JavaScript精粹》`, `《计算机网络》`
-## 在读
+## On Process
 `《JavaScript DOM编程艺术》`,`《高性能JavaScript》`,`《精通CSS》`,`《图解HTTP》`,`《ES6》`
-## 拟读
+## Plan
 `《锋利的Jquery》`,`《深入浅出NodeJs》`,`《HTTP权威教程》`,`《webkit技术内幕》`,`《TCP/IP详解：卷一》`,
 
 ## 笔记Note
