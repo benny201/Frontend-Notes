@@ -25,7 +25,7 @@
 * [数组](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/数组)
 * [方法](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/方法)
 * [糟粕](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/糟粕)
-```
+
 ```
 阅读《JavaScript DOM编程艺术》的笔记
 ```
