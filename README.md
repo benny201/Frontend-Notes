@@ -25,8 +25,18 @@
 ```
 阅读《JavaScript精粹》的笔记
 ```
+<<<<<<< HEAD
 * [Note Link](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹)
 
+=======
+* [语法](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/语法)
+* [对象](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/对象)
+* [函数](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/函数)
+* [继承](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/继承)
+* [数组](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/数组)
+* [方法](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/方法)
+* [糟粕](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹/糟粕)
+>>>>>>> origin/master
 `总结：`读完《JavaScript高级程序设计》的基础部分再来看这本书的时候，理清了很多之前的问题。这本书还从JS起源来分析JS中的糟粕，有理有据。
 
 ```
