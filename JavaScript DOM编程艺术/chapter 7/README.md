@@ -40,3 +40,56 @@ document.getElementById("testdiv").appendChild(newNode);
 ```javascript
 var textnode = document.createTextNode("text");
 ```
+
+### insertBefore()
+DOM提供了名为`insertBefore()`方法，这个方法是将一个新元素插入到现有的元素之前。
+```javascript
+element.insertBefore(newELement, targerElement)
+```
+### insertAfter()
+自定义的一个函数，DOM没有提供
+```javascript
+function insertAfter(newELement, targerElement) {
+    var parent = newELement.parentNode;
+    //先检查是不是最后一个儿子，如果是直接插入
+    if (parent.lastChild === targerElement) {
+        parent.appendChild(newELement);
+    } else {
+        //如果不是，则插入到下个兄弟与目标element之间
+        parent.insertBefore(newELement, targerElement.nextSibling);
+    }
+}
+```
+## Ajax
+Ajax主要优势就是对页面的请求以异步的方式发送到服务器，服务器不会用整个页面来响应请求，它会在后台处理请求。
+
+### 兼容IE7之前版本
+IE7+都支持原生的XHR对象了，只有IE5之前的比较麻烦,IE7之前借助了一个MSXML来创建XHR对象。
+```javascript
+function  getHTTPObject() {
+    if (typeof XMLHttpRequest == "undefined") {
+        try {
+            return new ActiveXObject("Msxml2.XMLHTTP.6.0");
+        } catch(e) {
+
+        }
+        try {
+            return new ActiveXObject("Msxml2.XMLHTTP.3.0");
+        } catch(e) {
+
+        }
+        try {
+            return new ActiveXObject("Msxml2.XMLHTTP");
+        } catch(e) {
+
+        }
+    }
+}
+```
+
+### onreadystatechange/readyState
+* readyState: 0-4, 4表示完成
+* xhr.status >= 200 && xhr.status < 300 || xhr.status ==304
+
+### Hijax
+渐进增强的使用Ajax
