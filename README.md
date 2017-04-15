@@ -1,11 +1,12 @@
 # Front-End Books and Note
 学习JavaScript过程中阅读过的的书籍以及看过的网上资源。
 ## DONE
-`《JavaScript高级程序设计》`, `《JavaScript精粹》`, `《JavaScript DOM编程艺术》`
+`《JavaScript高级程序设计》`, `《JavaScript精粹》`, `《JavaScript DOM编程艺术》`, `《NodeJS入门》`
 ## On Process
-`《高性能JavaScript》`,`《精通CSS》`,`《图解HTTP》`,`《ES6》`
+`《你不知道的JavaScript 上卷》`, `《精通CSS》`, `《图解HTTP》`, `《深入理解计算机系统》`, `《深入浅出NodeJs》`
 ## Plan
-`《锋利的Jquery》`,`《深入浅出NodeJs》`,`《HTTP权威教程》`,`《webkit技术内幕》`,`《TCP/IP详解：卷一》`
+`《高性能JavaScript》`, `《你不知道的JavaScript 下卷》`, `《锋利的Jquery》`, `《HTTP权威教程》`, `《webkit技术内幕》`,
+`《TCP/IP详解：卷一》`, `《MongoDB权威指南》`, `《图解TCP／IP》`, `《ES6标准入门》`
 
 ## 笔记Note
 ### 1.阅读《JavaScript高级程序设计》的笔记
@@ -27,7 +28,14 @@
 
 `总结：`比较基础的JS教程，比较像head first系列的风格
 
-### 4.阅读《高性能JavaScript》的笔记
+### 4.阅读《你不知道的JavaScript 上卷》的笔记
+* [Note Link]()
+
+### 5.阅读《深入浅出NodeJs》的笔记
+* [Note Link]()
+
+### 6.阅读《深入理解计算机系统》的笔记
+* [Note Link]()
 
 ## 其他网课以及文章
 ### JavaScript一些重要知识点
