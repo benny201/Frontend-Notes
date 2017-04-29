@@ -57,4 +57,11 @@ console.log('Hi!');
 // Resolved
 ```
 如果调用resolve函数和reject函数时带有参数，那么它们的参数会被传递给回调函数。reject函数的参数通常是Error对象的实例，表示抛出的错误；
-resolve函数的参数除了正常的值以外，还可能是另一个Promise实例，表示异步操作的结果有可能是一个值，也有可能是另一个异步操作
+resolve函数的参数除了正常的值以外，还可能是另一个Promise实例，表示异步操作的结果有可能是一个值，也有可能是另一个异步操作。
+
+
+## Promise.prototype.then()
+Promise实例具有then方法，也就是说，then方法是定义在原型对象Promise.prototype上的。
+它的作用是为Promise实例添加状态改变时的回调函数。
+then方法的第一个参数是Resolved状态的回调函数，第二个参数（可选）是Rejected状态的回调函数。
+`then方法返回的是一个新的Promise实例,因此可以采用链式写法，即then方法后面再调用另一个then方法。`

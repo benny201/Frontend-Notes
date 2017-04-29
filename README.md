@@ -8,34 +8,24 @@
 `《高性能JavaScript》`, `《你不知道的JavaScript 下卷》`, `《锋利的Jquery》`, `《HTTP权威教程》`, `《webkit技术内幕》`,
 `《TCP/IP详解：卷一》`, `《MongoDB权威指南》`, `《图解TCP／IP》`, `《ES6标准入门》`
 
-## 笔记Note
-### 1.阅读《JavaScript高级程序设计》的笔记
+## JavaScript笔记/JS Note
+### 1.阅读《JavaScript高级程序设计》的笔记 -> [Note Link](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript高级程序设计)
 
-* [Note Link](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript高级程序设计)
+### 2.阅读《JavaScript精粹》的笔记 -> [Note Link](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹)
 
-`总结：`这本书在这几个月都有反复再看看基础章节，非常全面的JavaScript入门教材。但是比较难啃，然而读完之后再读JavaScript相关著作就如虎添翼了。
+### 3.阅读《JavaScript DOM编程艺术》的笔记 -> [Note Link](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript%20DOM编程艺术)
 
-### 2.阅读《JavaScript精粹》的笔记
+### 4.阅读《你不知道的JavaScript 上卷》的笔记 -> [Note Link]()
 
-* [Note Link](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript语言精粹)
+### 5.阅读《深入浅出NodeJs》的笔记 -> [Note Link](https://github.com/benny201/Front-End-Notes/tree/master/深入浅出NodeJs)
 
-`总结：`读完《JavaScript高级程序设计》的基础部分再来看这本书的时候，理清了很多之前的问题。这本书还从JS起源来分析JS中的糟粕，有理有据。
+### 6.阅读《深入理解计算机系统》的笔记 -> [Note Link]()
 
 
-### 3.阅读《JavaScript DOM编程艺术》的笔记
+## CSS笔记／CSS note
+* [CSS3 tansition/transform/animations]()
 
-* [Note Link](https://github.com/benny201/JavaScript-Notes/tree/master/JavaScript%20DOM编程艺术)
-
-`总结：`比较基础的JS教程，比较像head first系列的风格
-
-### 4.阅读《你不知道的JavaScript 上卷》的笔记
-* [Note Link]()
-
-### 5.阅读《深入浅出NodeJs》的笔记
-* [Note Link]()
-
-### 6.阅读《深入理解计算机系统》的笔记
-* [Note Link]()
+### 1.《精通CSS》-> [Note Link]()
 
 ## 其他网课以及文章
 ### JavaScript一些重要知识点
