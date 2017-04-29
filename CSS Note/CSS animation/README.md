@@ -1,5 +1,6 @@
 # CSS动画
 > http://www.zhangxinxu.com/wordpress/2010/11/css3-transitions-transforms-animation-introduction/
+
 CSS3动画相关的几个属性是：transition, transform, animation
 * transition指过渡
 * transform指变换,与transition结合使用

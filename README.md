@@ -23,9 +23,11 @@
 
 
 ## CSS笔记／CSS note
-* [CSS3 tansition/transform/animations]()
-
 ### 1.《精通CSS》-> [Note Link]()
+### 一些重要知识点
+* [CSS3 tansition/transform/animations](https://github.com/benny201/Front-End-Notes/tree/master/CSS%20Note/CSS%20animation)
+
+
 
 ## 其他网课以及文章
 ### JavaScript一些重要知识点
